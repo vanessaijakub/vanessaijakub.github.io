@@ -1,4 +1,6 @@
 /* =========================
+CSS
+/* =========================
    USTAWIENIA GŁÓWNE
    ========================= */
 
@@ -12,6 +14,21 @@ body {
     background: #f8f5ef;
     color: #292724;
     font-family: Georgia, serif;
+}
+
+body.home-page {
+    /* 
+        Biała półprzezroczysta nakładka (50%) połączona ze zdjęciem tła.
+        Jeśli chcesz zmienić moc nakładki, zmień "0.5" na mniejszą (np. 0.3) lub większą (np. 0.7) wartość.
+    */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('tlo.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
 }
 
 
