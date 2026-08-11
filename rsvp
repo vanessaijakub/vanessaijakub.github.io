@@ -1,0 +1,31 @@
+HTML
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Vanessa i Jakub</title>
+    <!-- Tutaj link do Twojego arkusza CSS, np. <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+    <!-- Menu nawigacyjne (skopiuj takie samo jak na innych podstronach) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="ceremonia-wesele.html">Ceremonia i Wesele</a></li>
+            <li><a href="rsvp.html" class="active">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Główna treść zakładki RSVP -->
+    <main style="text-align: center; padding: 50px 20px;">
+        <h1>RSVP</h1>
+        <p>Będzie nam niezwykle miło, jeśli będziecie z nami w tym wyjątkowym dniu.</p>
+        <p style="font-size: 1.2rem; margin-top: 20px;">
+            Prosimy o potwierdzenie przybycia do 1.06.2027 </strong>.
+        </p>
+    </main>
+
+</body>
+</html>
