@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanessa & Jakub | Biorą ślub!</title>
+    <title>Vanessa &amp; Jakub | Biorą ślub!</title>
 
     <style>
         body {
@@ -23,58 +23,76 @@
         }
 
         .names {
+            margin: 0;
             font-size: 64px;
             font-weight: normal;
             letter-spacing: 4px;
-            margin: 0;
         }
 
         .subtitle {
+            margin-top: 20px;
             font-size: 22px;
             font-style: italic;
-            margin-top: 20px;
         }
 
         .date {
+            margin-top: 30px;
             font-size: 26px;
             letter-spacing: 5px;
-            margin-top: 30px;
+        }
+
+        .message {
+            margin: 20px auto 0;
+            max-width: 500px;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.7;
         }
 
         .line {
             width: 60px;
             height: 1px;
-            background: #b49b68;
             margin: 30px auto;
+            background: #b49b68;
         }
 
-        .message {
-            font-size: 22px;
-            font-style: italic;
-            line-height: 1.7;
-            max-width: 500px;
-            margin: 0 auto;
+        @media (max-width: 600px) {
+            .welcome {
+                padding: 30px 20px;
+            }
+
+            .names {
+                font-size: 42px;
+                letter-spacing: 2px;
+            }
+
+            .date {
+                font-size: 21px;
+                letter-spacing: 3px;
+            }
+
+            .subtitle,
+            .message {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <main class="welcome">
-
-        <h1 class="names">Vanessa & Jakub</h1>
-
+        <h1 class="names">Vanessa &amp; Jakub</h1>
 
         <p class="subtitle">biorą ślub</p>
 
-        <p class="date"> 28.08.2027</p>
+        <p class="date">28.08.2027</p>
+
+        <div class="line"></div>
 
         <p class="message">
-            Z ogromną radością zapraszamy Was
+            Z ogromną radością zapraszamy Was<br>
             do wspólnego świętowania.
         </p>
-
     </main>
-
 </body>
 </html>
