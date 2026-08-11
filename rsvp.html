@@ -1,136 +1,137 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP</title>
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f8f5ef;
-            color: #292724;
-            font-family: Georgia, serif;
-            text-align: center;
-        }
+    <title>RSVP | Vanessa & Jakub</title>
 
-        .menu {
-            position: fixed;
-            top: 25px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-
-        .menu a {
-            color: #292724;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 4px;
-        }
-
-        .menu a:hover,
-        .menu a.active {
-            border-bottom-color: #b49b68;
-        }
-
-        .welcome {
-            padding: 40px;
-        }
-
-        .names {
-            margin: 0;
-            font-size: 64px;
-            font-weight: normal;
-            letter-spacing: 4px;
-        }
-
-        .subtitle {
-            margin-top: 20px;
-            font-size: 22px;
-            font-style: italic;
-        }
-
-        .date {
-            margin-top: 30px;
-            font-size: 26px;
-            letter-spacing: 5px;
-        }
-
-        .message {
-            margin: 20px auto 0;
-            max-width: 500px;
-            font-size: 22px;
-            font-style: italic;
-            line-height: 1.7;
-        }
-
-        .line {
-            width: 60px;
-            height: 1px;
-            margin: 30px auto;
-            background: #b49b68;
-        }
-
-        @media (max-width: 600px) {
-            .menu {
-                top: 18px;
-                gap: 15px;
-                font-size: 12px;
-            }
-
-            .welcome {
-                padding: 30px 20px;
-            }
-
-            .names {
-                font-size: 42px;
-                letter-spacing: 2px;
-            }
-
-            .date {
-                font-size: 21px;
-                letter-spacing: 3px;
-            }
-
-            .subtitle,
-            .message {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <nav class="menu">
-        <a href="index.html" class="active">Strona główna</a>
-        <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
-         <a href="transport-i-noclegi.html">Transport i noclegi</a>
+        <a href="index.html">
+            Strona główna
+        </a>
+
+        <a href="ceremonia-wesele.html">
+            Ceremonia i wesele
+        </a>
+
+        <a href="transport-i-noclegi.html">
+            Transport i noclegi
+        </a>
+
+        <a href="rsvp.html" class="active">
+            RSVP
+        </a>
     </nav>
 
-    <main class="welcome">
-        <h1 class="names">RSVP</h1>
 
-        <p class="subtitle"></p>
+    <main class="page">
 
-        <p class="date">Uprzejmie prosimy o potwierdzenie obecności do 1 czerwca 2027.<br>
-</p>
+        <div class="content">
 
-        <div class="line"></div>
+            <h1 class="page-title">
+                RSVP
+            </h1>
 
-        <p class="message">
-            Vanessa +48 882 398 273<br>
-            Jakub +48 573 084 617
-        </p>
+            <p class="page-subtitle">
+                Dajcie nam znać, czy będziecie z nami
+                w tym wyjątkowym dniu.
+            </p>
+
+            <div class="gold-line"></div>
+
+
+            <form class="rsvp-form">
+
+                <label for="name">
+                    Imię i nazwisko
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Wasze imię i nazwisko"
+                    required
+                >
+
+
+                <label for="attendance">
+                    Czy będziecie z nami?
+                </label>
+
+                <select
+                    id="attendance"
+                    name="attendance"
+                    required
+                >
+
+                    <option value="">
+                        Wybierz odpowiedź
+                    </option>
+
+                    <option value="yes">
+                        Tak, będziemy!
+                    </option>
+
+                    <option value="no">
+                        Niestety nie będziemy mogli przyjechać
+                    </option>
+
+                </select>
+
+
+                <label for="guests">
+                    Liczba osób
+                </label>
+
+                <select
+                    id="guests"
+                    name="guests"
+                >
+
+                    <option value="1">
+                        1 osoba
+                    </option>
+
+                    <option value="2">
+                        2 osoby
+                    </option>
+
+                    <option value="3">
+                        3 osoby
+                    </option>
+
+                    <option value="4">
+                        4 osoby
+                    </option>
+
+                </select>
+
+
+                <label for="message">
+                    Dodatkowa wiadomość
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Np. informacje dotyczące diety, alergii itp."
+                ></textarea>
+
+
+                <button type="submit">
+                    Potwierdź obecność
+                </button>
+
+            </form>
+
+        </div>
+
     </main>
-</body>
-</html>
