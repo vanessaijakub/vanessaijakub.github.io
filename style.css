@@ -1,0 +1,375 @@
+/* =========================
+   USTAWIENIA GŁÓWNE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8f5ef;
+    color: #292724;
+    font-family: Georgia, serif;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.menu {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    z-index: 100;
+}
+
+.menu a {
+    color: #292724;
+    text-decoration: none;
+
+    border-bottom: 1px solid transparent;
+
+    padding-bottom: 4px;
+
+    transition: border-color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+    border-bottom-color: #b49b68;
+}
+
+
+/* =========================
+   STRONA GŁÓWNA
+   ========================= */
+
+.home-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.welcome {
+    padding: 40px;
+}
+
+.names {
+    margin: 0;
+
+    font-size: 64px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+.subtitle {
+    margin-top: 20px;
+
+    font-size: 22px;
+    font-style: italic;
+}
+
+.date {
+    margin-top: 30px;
+
+    font-size: 26px;
+    letter-spacing: 5px;
+}
+
+.message {
+    margin: 20px auto 0;
+
+    max-width: 500px;
+
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+
+    margin: 30px auto;
+
+    background: #b49b68;
+}
+
+
+/* =========================
+   WSPÓLNY UKŁAD PODSTRON
+   ========================= */
+
+.page {
+    min-height: 100vh;
+
+    padding: 120px 25px 70px;
+
+    text-align: center;
+}
+
+.content {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.page-title {
+    margin: 0;
+
+    font-size: 44px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    margin-top: 15px;
+
+    font-size: 19px;
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+.gold-line {
+    width: 60px;
+    height: 1px;
+
+    margin: 30px auto 40px;
+
+    background: #b49b68;
+}
+
+
+/* =========================
+   SEKCJE
+   ========================= */
+
+.section {
+    margin: 45px auto;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.section p {
+    max-width: 650px;
+
+    margin: 10px auto;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   KARTY / INFORMACJE
+   ========================= */
+
+.info-box {
+    max-width: 650px;
+
+    margin: 25px auto;
+    padding: 25px;
+
+    border: 1px solid #ded7c9;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.info-box h3 {
+    margin-top: 0;
+
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.info-box p {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   LINKI NA PODSTRONACH
+   ========================= */
+
+.content a {
+    color: #292724;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #b49b68;
+}
+
+.content a:hover {
+    color: #8e784e;
+}
+
+
+/* =========================
+   RSVP
+   ========================= */
+
+.rsvp-form {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.rsvp-form label {
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 7px;
+
+    font-size: 16px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5cdbf;
+    border-radius: 0;
+
+    background: #fffdf9;
+
+    color: #292724;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.rsvp-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.rsvp-form button {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 12px 30px;
+
+    border: 1px solid #b49b68;
+
+    background: transparent;
+
+    color: #292724;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.rsvp-form button:hover {
+    background: #b49b68;
+    color: #fff;
+}
+
+
+/* =========================
+   ZDJĘCIA
+   ========================= */
+
+.photo {
+    width: 100%;
+    max-width: 700px;
+
+    display: block;
+
+    margin: 30px auto;
+
+    height: auto;
+}
+
+
+/* =========================
+   TELEFONY
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .menu {
+        top: 18px;
+
+        gap: 12px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .page {
+        padding: 105px 20px 50px;
+    }
+
+    .welcome {
+        padding: 30px 20px;
+    }
+
+    .names {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .date {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+    .subtitle,
+    .message {
+        font-size: 20px;
+    }
+
+    .page-title {
+        font-size: 34px;
+    }
+
+    .page-subtitle {
+        font-size: 17px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 17px;
+    }
+}
