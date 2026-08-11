@@ -6,33 +6,7 @@
     <title>Vanessa &amp; Jakub | Biorą ślub!</title>
 
     <style>
-        .menu {
-    position: fixed;
-    top: 25px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-.menu a {
-    color: #292724;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 4px;
-}
-
-.menu a:hover {
-    border-bottom-color: #b49b68;
-}
         body {
-            <nav class="menu">
-    <a href="index.html">Strona główna</a>
-    <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
-</nav>
             margin: 0;
             min-height: 100vh;
             display: flex;
@@ -42,6 +16,30 @@
             color: #292724;
             font-family: Georgia, serif;
             text-align: center;
+        }
+
+        .menu {
+            position: fixed;
+            top: 25px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .menu a {
+            color: #292724;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            border-bottom-color: #b49b68;
         }
 
         .welcome {
@@ -83,6 +81,12 @@
         }
 
         @media (max-width: 600px) {
+            .menu {
+                top: 18px;
+                gap: 15px;
+                font-size: 12px;
+            }
+
             .welcome {
                 padding: 30px 20px;
             }
@@ -106,6 +110,11 @@
 </head>
 
 <body>
+    <nav class="menu">
+        <a href="index.html" class="active">Strona główna</a>
+        <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
+    </nav>
+
     <main class="welcome">
         <h1 class="names">Vanessa &amp; Jakub</h1>
 
