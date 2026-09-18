@@ -16,7 +16,7 @@ body {
 
 /* Zmienne tła: tło nr 1 (tlo.jpg) */
 body.bg-one {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('tlo.jpg');
+    background-image: linear-gradient(rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85)), url('tlo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -350,15 +350,19 @@ body.bg-two {
 @media (max-width: 600px) {
 
     .menu {
-        top: 18px;
-
-        gap: 12px;
-
-        padding: 0 10px;
-
-        font-size: 11px;
-
+        top: 15px;
+        gap: 15px;
+        padding: 10px 15px;
+        font-size: 13px;
         letter-spacing: 0.5px;
+        justify-content: flex-start;
+        overflow-x: auto;            /* Umożliwia przewijanie menu palcem na telefonie */
+        white-space: nowrap;         /* Zapobiega spadaniu wyrazów do nowej linii */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;               /* Ukrywa suwak paska menu dla estetyki */
     }
 
     .page {
