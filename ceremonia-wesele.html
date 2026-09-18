@@ -4,108 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ceremonia i wesele | Vanessa & Jakub</title>
-
+    <title>Ceremonia i wesele | Vanessa &amp; Jakub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styl dla tła z nałożoną przezroczystą warstwą */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Georgia, serif;
+            color: #292724;
+            /* Zdjęcie w tle + półprzezroczysta beżowa/kremowa warstwa rozjaśniająca (efekt przezroczystości) */
+            background: linear-gradient(rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85)), url('tlo2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Styl menu (jeśli nie ma go w pliku style.css) */
+        .menu {
+            position: fixed;
+            top: 25px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 0 15px;
+            background: rgba(248, 245, 239, 0.9);
+            z-index: 100;
+        }
+        .menu a {
+            color: #292724;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 4px;
+        }
+        .menu a:hover {
+            border-bottom-color: #b49b68;
+        }
+
+        /* Układ treści */
+        .page {
+            padding: 120px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .page-title {
+            font-weight: normal;
+            font-size: 42px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .gold-line {
+            width: 60px;
+            height: 1px;
+            margin: 20px auto 30px;
+            background: #b49b68;
+        }
+
+        /* Pudełka na informacje, żeby były czytelne na tle */
+        .info-box {
+            background: rgba(255, 255, 255, 0.7); /* Lekko białe, półprzezroczyste tło wewnątrz kafelków */
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #e3dec9;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #b49b68;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
 
- <nav class="menu">
-    <a href="index.html">Strona główna</a>
-    <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
-    <a href="transport-i-noclegi.html">Transport i noclegi</a>
-    <a href="plan-stolow.html">Plan stołów</a>
-    <a href="teksty-piosenek.html">Teksty piosenek</a>
-    <a href="rsvp.html">RSVP</a>
-</nav>
-
+    <nav class="menu">
+        <a href="index.html">Strona główna</a>
+        <a href="ceremonia-wesele.html" style="border-bottom-color: #b49b68;">Ceremonia i wesele</a>
+        <a href="transport-i-noclegi.html">Transport i noclegi</a>
+        <a href="plan-stolow.html">Plan stołów</a>
+        <a href="teksty-piosenek.html">Teksty piosenek</a>
+        <a href="rsvp.html">RSVP</a>
+    </nav>
 
     <main class="page">
-
         <div class="content">
 
-            <h1 class="page-title">
-                Ceremonia i wesele
-            </h1>
-
-            <p class="page-subtitle">
-                Najważniejsze informacje dotyczące naszego wielkiego dnia.
-            </p>
-
-            <div class="gold-line"></div>
-
+            <h1 class="page-title">Ceremonia i wesele</h1>
+            <p class="page-subtitle">Najważniejsze informacje dotyczące naszego wielkiego dnia.</p>
+            <div class="gold-level gold-line"></div>
 
             <section class="section">
-
-                <h2>
-                    Ceremonia
-                </h2>
-
+                <h2>Ceremonia</h2>
                 <div class="info-box">
-
-                    <h3>
-                        28 sierpnia 2027
-                    </h3>
-
-                    <p>
-                        Godzina: <strong>14:00</strong>
-                    </p>
-
-                    <p>
-                        Miejsce: <strong>Kościół Rzymskokatolicki, Sanktuarium św. Józefa w Rudzie Śląskiej</strong>
-                    </p>
-
-                    <p>
-                        Adres: <strong>ul. Piastowska 16, Ruda Śląska</strong>
-                    </p>
-
+                    <h3>28 sierpnia 2027</h3>
+                    <p>Godzina: <strong>14:00</strong></p>
+                    <p>Miejsce: <strong>Kościół Rzymskokatolicki, Sanktuarium św. Józefa w Rudzie Śląskiej</strong></p>
+                    <p>Adres: <strong>ul. Piastowska 16, Ruda Śląska</strong></p>
                 </div>
-
             </section>
-
 
             <section class="section">
-
-                <h2>
-                    Wesele
-                </h2>
-
+                <h2>Wesele</h2>
                 <div class="info-box">
-
-                    <h3>
-                        Po zakończeniu uroczystości zaślubin zapraszamy do wspólnej zabawy!
-                    </h3>
-
-                    <p>
-                       
-
-                    <p>
-                        Miejsce: <strong>Sala balowa Hotelu-Restauracji "Adria" w Rudzie Śląskiej</strong>
-                    </p>
-
-                    <p>
-                        Adres: <strong>ul. Wolności 1, Ruda Śląska</strong>
-                    </p>
-
+                    <h3>Po zakończeniu uroczystości zaślubin zapraszamy do wspólnej zabawy!</h3>
+                    <p>Miejsce: <strong>Sala balowa Hotelu-Restauracji "Adria" w Rudzie Śląskiej</strong></p>
+                    <p>Adres: <strong>ul. Wolności 1, Ruda Śląska</strong></p>
                 </div>
-
             </section>
 
- <section class="section">
-
-        
-
-                <p>
-                    Odległość między kościołem, a salą wynosi 700m. </p>
-                 
-
+            <section class="section">
+                <div class="info-box" style="padding: 15px;">
+                    <p style="margin: 0;">Odległość między kościołem, a salą wynosi 700m.</p>
+                </div>
             </section>
-            
 
         </div>
-
     </main>
 
 </body>
