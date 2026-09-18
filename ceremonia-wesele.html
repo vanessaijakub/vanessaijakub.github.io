@@ -13,14 +13,15 @@
             min-height: 100vh;
             font-family: Georgia, serif;
             color: #292724;
-            /* Zdjęcie w tle + półprzezroczysta beżowa/kremowa warstwa rozjaśniająca (efekt przezroczystości) */
+            /* Zdjęcie w tle + półprzezroczysta beżowa warstwa rozjaśniająca */
             background: linear-gradient(rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85)), url('tlo2.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
         }
 
-        /* Styl menu (jeśli nie ma go w pliku style.css) */
+        /* Styl menu */
         .menu {
             position: fixed;
             top: 25px;
@@ -73,9 +74,9 @@
             background: #b49b68;
         }
 
-        /* Pudełka na informacje, żeby były czytelne na tle */
+        /* Pudełka na informacje */
         .info-box {
-            background: rgba(255, 255, 255, 0.7); /* Lekko białe, półprzezroczyste tło wewnątrz kafelków */
+            background: rgba(255, 255, 255, 0.7);
             padding: 25px;
             border-radius: 8px;
             margin-bottom: 25px;
@@ -107,7 +108,7 @@
 
             <h1 class="page-title">Ceremonia i wesele</h1>
             <p class="page-subtitle">Najważniejsze informacje dotyczące naszego wielkiego dnia.</p>
-            <div class="gold-level gold-line"></div>
+            <div class="gold-line"></div>
 
             <section class="section">
                 <h2>Ceremonia</h2>
