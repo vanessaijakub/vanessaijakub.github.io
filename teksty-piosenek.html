@@ -13,6 +13,7 @@
             color: #292724;
             font-family: Georgia, serif;
             text-align: center;
+            scroll-behavior: smooth; /* Płynne przewijanie strony */
         }
         .menu {
             position: fixed;
@@ -34,13 +35,14 @@
             text-decoration: none;
             border-bottom: 1px solid transparent;
             padding-bottom: 4px;
+            transition: border-color 0.3s;
         }
         .menu a:hover,
         .menu a.active {
             border-bottom-color: #b49b68;
         }
         .content {
-            padding: 120px 20px 40px;
+            padding: 120px 20px 60px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -48,12 +50,65 @@
             font-weight: normal;
             font-size: 42px;
             letter-spacing: 2px;
+            margin-bottom: 10px;
         }
         .line {
             width: 60px;
             height: 1px;
-            margin: 20px auto;
+            margin: 20px auto 30px;
             background: #b49b68;
+        }
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Styl menu nawigacyjnego po piosenkach */
+        .song-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            padding: 0;
+            list-style: none;
+        }
+        .song-nav li a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #fff;
+            color: #292724;
+            text-decoration: none;
+            border: 1px solid #e3dec9;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .song-nav li a:hover {
+            background: #b49b68;
+            color: #fff;
+            border-color: #b49b68;
+        }
+
+        /* Style dla poszczególnych utworów */
+        .song-item {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .song-item h2 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: #b49b68;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e3dec9;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .song-lyrics {
+            font-size: 15px;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -71,342 +126,329 @@
     <main class="content">
         <h1>Teksty piosenek</h1>
         <div class="line"></div>
-        <p>Poniżej znajdziesz teksty utworów do wspólnego biesiadowania. <br><br><br>
-"Pije Kuba do Jakuba” <br>
-           Pije Kuba do Jakuba,
-Jakub do Michała,<br>
-wiwat ty , wiwat ja ,
-kompanija cała.<br>
-<br>
-[REF] A kto nie wypije,
-tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br>
-<br>
-W dawnym stanie , choć w żupanie,
-szlachcic złoto dźwiga,<br>
-dzisiaj wpięto , kuso , wcięto,
-a w kieszeni figa.<br>
-<br>
-[REF] Kto za modą żyje, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br>
-<br>
-<br>
-Koroneczki , perełeczki,
-miała pani sama,<br>
-dziś szynkarka i kucharka
-stroi się jak dama.<br>
-<br>
-[REF] Kto nad stan swój żyje, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br><br>
-Indyk z sosem , zraz 
-z bigosem,<br>
-jadły dawniej pany.
-Dziś ślimaki i robaki
-jedzą jak bociany.<br>
-[REF] Kto żabami żyje, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br>
-<br>
+        <p class="intro-text">Poniżej znajdziesz teksty utworów do wspólnego biesiadowania.</p>
 
-Tyś Polakiem i ja takim,
-w tym jest nasza chwała,<br>
-wiwat ty , wiwat ja,
-kompanija cała.
-<br>
-[REF] A kto nie wypije, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br>
-<br>
+        <!-- Menu skrótów do piosenek -->
+        <ul class="song-nav">
+            <li><a href="#kuba">Pije Kuba do Jakuba</a></li>
+            <li><a href="#sokoly">Hej sokoły!</a></li>
+            <li><a href="#ulani">Przybyli ułani pod okienko</a></li>
+            <li><a href="#stokrotka">Stokrotka</a></li>
+            <li><a href="#gitara">Gdybym miał gitarę</a></li>
+            <li><a href="#korale">Czerwone korale</a></li>
+            <li><a href="#cegla">Czerwony jak cegła</a></li>
+            <li><a href="#cyganie">My Cyganie</a></li>
+            <li><a href="#dzieweczka">Szła dzieweczka</a></li>
+            <li><a href="#jabluszko">Czerwone jabłuszko</a></li>
+        </ul>
 
-Pili nasi pradziadowie,
-każdy wypił czarę,<br>
-jednak głowy nie tracili,
-bo pijali miarę.
-<br>
-[REF] Kto nad miarę pije, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br><br>
+        <!-- Utwór 1 -->
+        <section class="song-item" id="kuba">
+            <h2>Pije Kuba do Jakuba</h2>
+            <div class="song-lyrics">
+                Pije Kuba do Jakuba, Jakub do Michała,<br>
+                wiwat ty , wiwat ja , kompanija cała.<br><br>
+                <strong>[REF]</strong> A kto nie wypije, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                W dawnym stanie , choć w żupanie, szlachcic złoto dźwiga,<br>
+                dzisiaj wpięto , kuso , wcięto, a w kieszeni figa.<br><br>
+                <strong>[REF]</strong> Kto za modą żyje, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                Koroneczki , perełeczki, miała pani sama,<br>
+                dziś szynkarka i kucharka stroi się jak dama.<br><br>
+                <strong>[REF]</strong> Kto nad stan swój żyje, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                Indyk z sosem , zraz z bigosem, jadły dawniej pany.<br>
+                Dziś ślimaki i robaki jedzą jak bociany.<br>
+                <strong>[REF]</strong> Kto żabami żyje, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                Tyś Polakiem i ja takim, w tym jest nasza chwała,<br>
+                wiwat ty , wiwat ja, kompanija cała.<br><br>
+                <strong>[REF]</strong> A kto nie wypije, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                Pili nasi pradziadowie, każdy wypił czarę,<br>
+                jednak głowy nie tracili, bo pijali miarę.<br><br>
+                <strong>[REF]</strong> Kto nad miarę pije, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.<br><br>
+                Pili nasi pradziadowie, nie byli pijacy,<br>
+                byli mężni , pracowici, bądźmy i my tacy.<br><br>
+                <strong>[REF]</strong> A kto nie wypije, tego we dwa kije,<br>
+                łupu cupu, cupu łupu, póki nie wypije.
+            </div>
+        </section>
 
-<br>
-Pili nasi pradziadowie,
-nie byli pijacy,<br>
-byli mężni , pracowici,
-bądźmy i my tacy.
-<br>
-[REF] A kto nie wypije, tego we dwa kije,<br>
-łupu cupu, cupu łupu,
-póki nie wypije.<br>
+        <!-- Utwór 2 -->
+        <section class="song-item" id="sokoly">
+            <h2>Hej sokoły!</h2>
+            <div class="song-lyrics">
+                Hej tam gdzieś znad czarnej wody,<br>
+                Wsiada na koń Kozak młody.<br>
+                Czule żegna się z dziewczyną.<br>
+                Jeszcze czulej z Ukrainą!<br><br>
+                <strong>[REF]</strong><br>
+                Hej! Hej! Hej sokoły!<br>
+                Omijajcie góry, lasy, rzeki, doły!<br>
+                Dzwoń! Dzwoń! Dzwoń dzwoneczku!<br>
+                Mój stepowy skowroneczku!<br><br>
+                Wiele dziewcząt jest na świecie,<br>
+                lecz najwięcej w Ukrainie!<br>
+                Tam me serce pozostanie,<br>
+                przy kochanej mej dziewczynie!<br><br>
+                <strong>[REF]</strong><br><br>
+                Żal, żal za dziewczyną!<br>
+                Za zieloną Ukrainą!<br>
+                Żal, żal, serce płacze.<br>
+                Już jej więcej nie zobaczę!<br><br>
+                <strong>[REF]</strong><br><br>
+                Wina, wina, wina, wina dajcie!<br>
+                A jak umrę pochowajcie.<br>
+                Na zielonej Ukrainie,<br>
+                Przy kochanej mej dziewczynie!
+            </div>
+        </section>
 
-            <br><br><br>
-“Hej sokoły!”<br>
-Hej tam gdzieś znad czarnej wody,<br>
-Wsiada na koń Kozak młody.<br>
-Czule żegna się z dziewczyną.<br>
-Jeszcze czulej z Ukrainą!<br><br>
+        <!-- Utwór 3 -->
+        <section class="song-item" id="ulani">
+            <h2>Przybyli ułani pod okienko</h2>
+            <div class="song-lyrics">
+                Przybyli ułani pod okienko, <br>
+                przybyli ułani pod okienko, <br>
+                pukają, stukają, puść panienko! <br>
+                pukają, stukają, puść panienko! <br><br>
+                O Boże, a cóż to za wojacy? <br>
+                O Boże, a cóż to za wojacy? <br>
+                Otwieraj, nie bój się to czwartacy! <br>
+                otwieraj, nie bój się to czwartacy! <br><br>
+                Przyszliśmy tu poić nasze konie, <br>
+                przyszliśmy tu poić nasze konie, <br>
+                za nami piechoty pełne błonie, <br>
+                za nami piechoty pełne błonie. <br><br>
+                O Jezu! A dokąd Bóg prowadzi? <br>
+                O Jezu! A dokąd Bóg prowadzi? <br>
+                Warszawę odwiedzić byśmy radzi!<br>
+                Warszawę odwiedzić byśmy radzi! <br><br>
+                A stamtąd już droga nam gotowa, <br>
+                a stamtąd już droga nam gotowa <br>
+                Do serca polskości ? <br>
+                do Krakowa! <br>
+                do serca polskości ? <br>
+                do Krakowa!
+            </div>
+        </section>
 
-[REF] <br>
-Hej! Hej! Hej sokoły!<br>
-Omijajcie góry, lasy, rzeki, doły!<br>
-Dzwoń! Dzwoń! Dzwoń dzwoneczku!<br>
-Mój stepowy skowroneczku!<br><br>
+        <!-- Utwór 4 -->
+        <section class="song-item" id="stokrotka">
+            <h2>Stokrotka</h2>
+            <div class="song-lyrics">
+                Gdzie strumyk płynie z wolna,<br>
+                Rozsiewa zioła maj,<br>
+                Stokrotka rosła polna<br>
+                A nad nią szumiał gaj.<br><br>
+                "W tym gaju tak ponuro,<br>
+                Że aż przeraża mnie,<br>
+                Ptaszęta za wysoko,<br>
+                A mnie samotnej źle".<br><br>
+                Wtem harcerz idzie z wolna:<br>
+                "Stokrotko, witam Cię,<br>
+                Twój urok mnie zachwyca,<br>
+                Czy chcesz być mą, czy nie?"<br><br>
+                Stokrotka się zgodziła<br>
+                I poszli w ciemny las,<br>
+                A harcerz taki gapa,<br>
+                Że aż w pokrzywy wlazł.<br><br>
+                A ona, ona, ona,<br>
+                Cóż biedna robić ma?<br>
+                Nad gapą pochylona<br>
+                I śmieje się cha! cha!
+            </div>
+        </section>
 
-Wiele dziewcząt jest na świecie,<br>
-lecz najwięcej w Ukrainie!<br>
-Tam me serce pozostanie,<br>
-przy kochanej mej dziewczynie!<br><br>
+        <!-- Utwór 5 -->
+        <section class="song-item" id="gitara">
+            <h2>Gdybym miał gitarę</h2>
+            <div class="song-lyrics">
+                Gdybym miał gitarę<br>
+                To bym na niej grał<br>
+                Opowiedziałbym o swej miłości<br>
+                Którą przeżyłem sam<br>
+                Opowiedziałbym o swej miłości<br>
+                Którą przeżyłem sam<br><br>
+                <strong>[REF]</strong><br>
+                A wszystko te czarne oczy<br>
+                Gdybym ja je miał<br>
+                Za te czarne cudne oczęta<br>
+                Serce dusze bym dał<br>
+                Za te czarne cudne oczęta<br>
+                Serce dusze bym dał<br><br>
+                Fajki ja nie palę<br>
+                Wódki nie piję<br>
+                Ale z żalu z żalu wielkiego<br>
+                Ledwoże żyję<br>
+                Ale z żalu z żalu wielkiego<br>
+                Ledwoże żyję<br><br>
+                <strong>[REF]</strong><br><br>
+                Ludzie mówią głupiś<br>
+                Po coś ty ją brał<br>
+                Po coś to dziewczę czarne figlarne<br>
+                Mocno pokochał<br>
+                Po coś to dziewczę czarne figlarne<br>
+                Mocno pokochał<br><br>
+                <strong>[REF]</strong>
+            </div>
+        </section>
 
-[REF]<br><br>
+        <!-- Utwór 6 -->
+        <section class="song-item" id="korale">
+            <h2>Czerwone korale</h2>
+            <div class="song-lyrics">
+                <strong>[REF]</strong><br>
+                Czerwone korale, czerwone niczym wino<br>
+                Korale z polnej jarzębiny<br>
+                I łzy dziewczyny i wielkie łzy<br><br>
+                Z miasta płaszcz i korale me<br>
+                On pochwalił i rzekł<br>
+                Że ze mną zatańczyć chce<br><br>
+                Jego dżins i mej bluzki biel<br>
+                Zwarły się w tangu wnet<br>
+                We włosy miał wtarty żel<br><br>
+                Potem mnie na wycieczkę wziął<br>
+                I na wycieczce tej<br>
+                Mą bieluśką bluzkę zmiął<br><br>
+                Wszyscy mi zazdrościli tam<br>
+                Gdy wróciłam i gdy<br>
+                W pomiętej bluzeczce szłam<br><br>
+                <strong>[REF]</strong><br><br>
+                Wczoraj też na tych tańcach był<br>
+                A na włosach mu żel<br>
+                Jak srebrzysty księżyc lśnił<br><br>
+                Tyle, że z Kryśką cały czas<br>
+                Tańczył, a w stronę mą<br>
+                Nie spojrzał ni jeden raz<br><br>
+                Z innym zatańczę gdy<br>
+                Z tą Kryśką będziesz ty<br>
+                A potem czemu nie<br>
+                Niech inny mą bluzkę mnie
+            </div>
+        </section>
 
-Żal, żal za dziewczyną!<br>
-Za zieloną Ukrainą!<br>
-Żal, żal, serce płacze.<br>
-Już jej więcej nie zobaczę!<br><br>
+        <!-- Utwór 7 -->
+        <section class="song-item" id="cegla">
+            <h2>Czerwony jak cegła</h2>
+            <div class="song-lyrics">
+                Nie wiem, jak mam to zrobić<br>
+                Ona zawstydza mnie<br>
+                Strach ma tak wielkie oczy<br>
+                Wokół ciemno jest<br><br>
+                Czuję się jak Benjamin<br>
+                I udaję, że śpię<br>
+                Może walnę kilka drinków<br>
+                Chyba nakręcą mnie, nakręcą mnie!<br><br>
+                Nie wiem, jak mam to zrobić<br>
+                By mężczyzną się stać<br>
+                I nie wypaść ze swej roli<br>
+                Tego, co pierwszy raz<br><br>
+                Gładzę czule jej ciało<br>
+                Skradam się do jej ust<br>
+                Wiem, że to jeszcze za mało<br>
+                Aby Ciebie mieć, no, aby mieć!<br><br>
+                <strong>[REF]</strong><br>
+                Czerwony jak cegła<br>
+                Rozgrzany jak piec<br>
+                Muszę mieć<br>
+                Muszę ją mieć! x2<br><br>
+                Nie mogę tak odejść<br>
+                Gdy kusi mnie grzech<br>
+                Muszę mieć<br>
+                Muszę ją mieć!<br><br>
+                Nie wiem, jak to się stało<br>
+                Ona chyba już śpi<br>
+                Leżę obok pełen wstydu<br>
+                Krótki to był zryw<br><br>
+                Będzie lepiej, gdy pójdę<br>
+                Nie chcę patrzyć jej w twarz<br>
+                Może kiedyś da mi szansę<br>
+                Spróbować jeszcze raz, no,<br>
+                jeszcze jeden, jeden raz!<br><br>
+                <strong>[REF]</strong><br><br>
+                Nie mogę tak odejść<br>
+                Gdy kusi mnie grzech<br>
+                Muszę mieć<br>
+                Muszę ją mieć!
+            </div>
+        </section>
 
-[REF]<br><br>
+        <!-- Utwór 8 -->
+        <section class="song-item" id="cyganie">
+            <h2>My Cyganie</h2>
+            <div class="song-lyrics">
+                My Cyganie, co pędzimy z wiatrem<br>
+                My Cyganie znamy cały świat<br>
+                My Cyganie wszystkim gramy<br>
+                A śpiewamy sobie tak<br><br>
+                <strong>[REF]</strong><br>
+                Ore, ore sza ba da ba da amore<br>
+                Ore ore, sza ba da ba da<br>
+                O muriaty, o szagriaty<br>
+                Hajda trojka na mienia<br><br>
+                Kiedy tańczę, niebo tańczy razem ze mną<br>
+                Kiedy gwiżdżę, gwiżdże ze mną wiatr<br>
+                Zamknę oczy, liście więdną<br>
+                Kiedy milknę, milczy świat<br><br>
+                <strong>[REF]</strong><br><br>
+                Będzie prościej, będzie prościej, będzie jaśniej<br>
+                Całą radość damy dzisiaj wam<br>
+                Będzie prościej, będzie jaśniej<br>
+                Gdy zaśpiewa każdy z was<br><br>
+                <strong>[REF]</strong>
+            </div>
+        </section>
 
-Wina, wina, wina, wina dajcie!<br>
-A jak umrę pochowajcie.<br>
-Na zielonej Ukrainie,<br>
-Przy kochanej mej dziewczynie!<br>
-            <br><br><br>
-“Przybyli ułani pod okienko”<br>
-            Przybyli ułani pod okienko, <br>
-przybyli ułani pod okienko, <br>
-pukają, stukają, puść panienko! <br>
-pukają, stukają, puść panienko! <br>
-O Boże, a cóż to za wojacy? <br>
-O Boże, a cóż to za wojacy? <br>
-Otwieraj, nie bój się to czwartacy! <br>
-otwieraj, nie bój się to czwartacy! <br>
-Przyszliśmy tu poić nasze konie, <br>
-przyszliśmy tu poić nasze konie, <br>
-za nami piechoty pełne błonie, <br>
-za nami piechoty pełne błonie. <br>
-O Jezu! A dokąd Bóg prowadzi? <br>
-O Jezu! A dokąd Bóg prowadzi? <br>
-Warszawę odwiedzić byśmy radzi!<br>
- Warszawę odwiedzić byśmy radzi! <br>
-A stamtąd już droga nam gotowa, <br>
-a stamtąd już droga nam gotowa <br>
-Do serca polskości ? <br>
-do Krakowa! <br>
-do serca polskości ? <br>
-do Krakowa!<br><br><br>
-            “Stokrotka”<br>
-Gdzie strumyk płynie z wolna,<br>
-Rozsiewa zioła maj,<br>
-Stokrotka rosła polna<br>
-A nad nią szumiał gaj.<br>
-"W tym gaju tak ponuro,<br>
-Że aż przeraża mnie,<br>
-Ptaszęta za wysoko,<br>
-A mnie samotnej źle".<br>
-Wtem harcerz idzie z wolna:<br>
-"Stokrotko, witam Cię,<br>
-Twój urok mnie zachwyca,<br>
-Czy chcesz być mą, czy nie?"<br>
-Stokrotka się zgodziła<br>
-I poszli w ciemny las,<br>
-Ą harcerz taki gapa,<br>
-Że aż w pokrzywy wlazł.<br>
-A ona, ona, ona,<br>
-Cóż biedna robić ma?<br>
-Nad gapą pochylona<br>
-I śmieje się cha! cha!<br><br><br>
-            “Gdybym miał gitarę"<br>
-Gdybym miał gitarę<br>
-To bym na niej grał<br>
-Opowiedziałbym o swej miłości<br>
-Którą przeżyłem sam<br>
-Opowiedziałbym o swej miłości<br>
-Którą przeżyłem sam<br><br>
-[REF]<br>
-A wszystko te czarne oczy<br>
-Gdybym ja je miał<br>
-Za te czarne cudne oczęta<br>
-Serce dusze bym dał<br>
-Za te czarne cudne oczęta<br>
-Serce dusze bym dał<br><br>
+        <!-- Utwór 9 -->
+        <section class="song-item" id="dzieweczka">
+            <h2>Szła dzieweczka</h2>
+            <div class="song-lyrics">
+                Szła dzieweczka do laseczka do zielonego<br>
+                Do zielonego do zielonego<br>
+                Napotkała myśliweczka bardzo szwarnego<br>
+                Bardzo szwarnego bardzo szwarnego<br><br>
+                <strong>[REF]</strong><br>
+                Gdzie jest ta ulica gdzie jest ten dom<br>
+                Gdzie jest ta dziewczyna co kocham ją<br>
+                Znalazłem ulicę znalazłem dom<br>
+                Znalazłem dziewczynę co kocham ją<br><br>
+                Myśliweczku kochaneczku bardzom Ci rada<br>
+                Bardzom Ci rada bardzom Ci rada<br>
+                Dałabym Ci chleba z masłem alem go zjadła<br>
+                Alem go zjadła alem go zjadła<br><br>
+                <strong>[REF]</strong>
+            </div>
+        </section>
 
-Fajki ja nie palę<br>
-Wódki nie piję<br>
-Ale z żalu z żalu wielkiego<br>
-Ledwoże żyję<br>
-Ale z żalu z żalu wielkiego<br>
-Ledwoże żyję<br><br>
+        <!-- Utwór 10 -->
+        <section class="song-item" id="jabluszko">
+            <h2>Czerwone jabłuszko</h2>
+            <div class="song-lyrics">
+                1. Czerwone jabłuszko przekrojone na krzyż<br>
+                Czemu ty dziewczyno krzywo na mnie patrzysz?<br><br>
+                <strong>[REF]</strong><br>
+                Gęsi za wodą, kaczki za wodą,<br>
+                Uciekaj dziewczyno, bo Cię pobodą.<br>
+                Ja Ci buzi dam, ty Mi buzi dasz,<br>
+                Ja Cię nie wydam, ty Mnie nie wydasz,<br>
+                Mazurek mazureczek, oberek obereczek<br>
+                Kujawiak, kujawiaczek, chodźże Maryś, chodźże, chodź, chodź.<br><br>
+                2. Czerwone jabłuszko po ziemi się toczy,<br>
+                Tę dziewczynę kocham, co ma modre oczy<br><br>
+                <strong>[REF]</strong> Gęsi za wodą, kaczki za wodą...<br><br>
+                3. Żebym ja wiedziała, żeś ty chłopak stały,<br>
+                To by moje oczy za tobą patrzały.<br><br>
+                <strong>[REF]</strong> Gęsi za wodą, kaczki za wodą...<br><br>
+                4. Czerwone jabłuszko, już mi heban gęści.<br>
+                A moja dziewczyna ma już lat czterdzieści.<br><br>
+                <strong>[REF]</strong> Gęsi za wodą, kaczki za wodą...
+            </div>
+        </section>
 
-[REF] <br><br>
-
-Ludzie mówią głupiś<br>
-Po coś ty ją brał<br>
-Po coś to dziewczę czarne figlarne<br>
-Mocno pokochał<br>
-Po coś to dziewczę czarne figlarne<br>
-Mocno pokochał<br><br>
-
-[REF]<br><br><br>
-            “Czerwone korale”<br>
-[REF] <br>
-            Czerwone korale, czerwone niczym wino<br>
-Korale z polnej jarzębiny<br>
-I łzy dziewczyny i wielkie łzy<br><br>
-
-Z miasta płaszcz i korale me<br>
-On pochwalił i rzekł<br>
-Że ze mną zatańczyć chce<br>
-
-Jego dżins i mej bluzki biel<br>
-Zwarły się w tangu wnet<br>
-We włosy miał wtarty żel<br>
-
-Potem mnie na wycieczkę wziął<br>
-I na wycieczce tej<br>
-Mą bieluśką bluzkę zmiął<br>
-
-Wszyscy mi zazdrościli tam<br>
-Gdy wróciłam i gdy<br>
-W pomiętej bluzeczce szłam<br>
-
-[REF]<br>
-
-Wczoraj też na tych tańcach był<br>
-A na włosach mu żel<br>
-Jak srebrzysty księżyc lśnił<br>
-
-Tyle, że z Kryśką cały czas<br>
-Tańczył, a w stronę mą<br>
-Nie spojrzał ni jeden raz<br>
-
-Z innym zatańczę gdy<br>
-Z tą Kryśką będziesz ty<br>
-A potem czemu nie<br>
-Niech inny mą bluzkę mnie<br><br><br>
-“Czerwony jak cegła”<br>
-            Nie wiem, jak mam to zrobić<br>
-Ona zawstydza mnie<br>
-Strach ma tak wielkie oczy<br>
-Wokół ciemno jest<br>
-
-Czuję się jak Benjamin<br>
-I udaję, że śpię<br>
-Może walnę kilka drinków<br>
-Chyba nakręcą mnie, <br>
-nakręcą mnie!<br>
-
-Nie wiem, jak mam to zrobić<br>
-By mężczyzną się stać<br>
-I nie wypaść ze swej roli<br>
-Tego, co pierwszy raz<br>
-
-Gładzę czule jej ciało<br>
-Skradam się do jej ust<br>
-Wiem, że to jeszcze za mało<br>
-Aby Ciebie mieć, no, aby mieć!<br><br>
-
-[REF]<br>
-Czerwony jak cegła<br>
-Rozgrzany jak piec<br>
-Muszę mieć<br>
-Muszę ją mieć! x2<br><br>
-
-Nie mogę tak odejść<br>
-Gdy kusi mnie grzech<br>
-Muszę mieć<br>
-Muszę ją mieć!<br>
-Nie wiem, jak to się stało<br>
-Ona chyba już śpi<br>
-Leżę obok pełen wstydu<br>
-Krótki to był zryw<br>
-
-Będzie lepiej, gdy pójdę<br>
-Nie chcę patrzyć jej w twarz<br>
-Może kiedyś da mi szansę<br>
-Spróbować jeszcze raz, no,<br>
- jeszcze jeden, jeden raz!<br>
-
-[REF]<br>
-
-Nie mogę tak odejść<br>
-Gdy kusi mnie grzech<br>
-Muszę mieć<br>
-Muszę ją mieć!<br><br>
-“My Cyganie”<br>
-            My Cyganie, co pędzimy z wiatrem<br>
-My Cyganie znamy cały świat<br>
-My Cyganie wszystkim gramy<br>
-A śpiewamy sobie tak<br><br>
-
-[REF]<br>
-Ore, ore sza ba da ba da amore<br>
-Ore ore, sza ba da ba da<br>
-O muriaty, o szagriaty<br>
-Hajda trojka na mienia<br><br>
-
-Kiedy tańczę, niebo tańczy razem ze mną<br>
-Kiedy gwiżdżę, gwiżdże ze mną wiatr<br>
-Zamknę oczy, liście więdną<br>
-Kiedy milknę, milczy świat<br>
-
-[REF]<br>
-
-Będzie prościej, będzie prościej, <br>
-będzie jaśniej<br>
-Całą radość damy dzisiaj wam<br>
-Będzie prościej, będzie jaśniej<br>
-Gdy zaśpiewa każdy z was<br>
-
- [REF]<br><br><br>
-            “Szła dzieweczka"<br>
-Szła dzieweczka do laseczka do zielonego<br>
-Do zielonego do zielonego<br>
-Napotkała myśliweczka bardzo szwarnego<br>
-Bardzo szwarnego bardzo szwarnego<br><br>
-
-[REF] <br>
-Gdzie jest ta ulica gdzie jest ten dom<br>
-Gdzie jest ta dziewczyna co kocham ją<br>
-Znalazłem ulicę znalazłem dom<br>
-Znalazłem dziewczynę co kocham ją<br><br>
-
-Myśliweczku kochaneczku bardzom Ci rada<br>
-Bardzom Ci rada bardzom Ci rada<br>
-Dałabym Ci chleba z masłem alem go zjadła<br>
-Alem go zjadła alem go zjadła<br>
-
-[REF]<br><br><br>
-            "Czerwone jabłuszko”<br>
-            1.Czerwone jabłuszko przekrojone na krzyż<br>
-Czemu ty dziewczyno krzywo na mnie patrzysz?<br>
-
-[REF]<br>
-Gęsi za wodą, kaczki za wodą,<br>
-Uciekaj dziewczyno, bo Cię pobodą.<br>
-Ja Ci buzi dam, ty Mi buzi dasz,<br>
-Ja Cię nie wydam, ty Mnie nie wydasz,<br>
-Mazurek mazureczek, oberek obereczek<br>
-Kujawiak, kujawiaczek, chodźże Maryś, <br>
-chodźże, chodź, chodź.<br>
-
-2. Czerwone jabłuszko po ziemi się toczy,<br>
-Tę dziewczynę kocham, co ma modre oczy<br>
-
-[REF] Gęsi za wodą, kaczki za wodą,...<br>
-
-3. Żebym ja wiedziała, żeś ty chłopak stały,<br>
-To by moje oczy za tobą patrzały.<br>
-
-[REF] Gęsi za wodą, kaczki za wodą...<br>
-
-4. Czerwone jabłuszko, już mi heban gęści.<br>
-A moja dziewczyna ma już lat czterdzieści.<br>
-
-[REF] Gęsi za wodą, kaczki za wodą...<br><br><br>
-
-            
-        </p>
     </main>
 
 </body>
