@@ -1,1 +1,747 @@
-/* ========================= USTAWIENIA GŁÓWNE ========================= */ * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; min-height: 100vh; background: #f8f5ef; color: #292724; font-family: Georgia, serif; } /* ========================= TŁA ========================= */ body.bg-one { background: linear-gradient( rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85) ), url('tlo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; } body.bg-two { background: linear-gradient( rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85) ), url('tlo2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; } /* ========================= WSPÓLNE MENU ========================= */ .menu { position: fixed; top: 25px; left: 0; right: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; padding: 0 15px; font-size: 14px; letter-spacing: 1px; background: #f8f5ef; z-index: 100; } .menu a { color: #292724; text-decoration: none; white-space: nowrap; border-bottom: 1px solid transparent; padding-bottom: 4px; transition: border-color 0.3s ease; } .menu a:hover, .menu a.active { border-bottom-color: #b49b68; } /* Stare elementy hamburgera są celowo ukryte / nieużywane. */ .menu-toggle { display: none; } /* ========================= STRONA GŁÓWNA ========================= */ .home-page { min-height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; background: linear-gradient( rgba(248, 245, 239, 0.82), rgba(248, 245, 239, 0.82) ), url('tlo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; } .welcome { width: 100%; max-width: 800px; padding: 120px 20px 60px; margin: 0 auto; } .names { margin: 0; font-size: 64px; font-weight: normal; letter-spacing: 4px; } .subtitle { margin-top: 20px; font-size: 22px; font-style: italic; } .date { margin-top: 30px; font-size: 26px; letter-spacing: 5px; } .message { max-width: 500px; margin: 20px auto 0; font-size: 20px; font-style: italic; line-height: 1.7; } .line { width: 60px; height: 1px; margin: 30px auto; background: #b49b68; } /* ========================= WSPÓLNY UKŁAD PODSTRON ========================= */ .page { min-height: 100vh; padding: 120px 25px 70px; text-align: center; } .content { max-width: 850px; margin: 0 auto; } .page-title { margin: 0; font-size: 44px; font-weight: normal; letter-spacing: 2px; } .page-subtitle { margin-top: 15px; font-size: 19px; font-style: italic; line-height: 1.7; } .gold-line { width: 60px; height: 1px; margin: 30px auto 40px; background: #b49b68; } /* ========================= SEKCJE ========================= */ .section { margin: 45px auto; } .section h2 { margin-bottom: 15px; font-size: 27px; font-weight: normal; letter-spacing: 1px; } .section p { max-width: 650px; margin: 10px auto; font-size: 18px; line-height: 1.8; } /* ========================= KARTY INFORMACYJNE ========================= */ .info-box { max-width: 650px; margin: 25px auto; padding: 25px; border: 1px solid #ded7c9; background: rgba(255, 255, 255, 0.25); } .info-box h3 { margin-top: 0; font-size: 21px; font-weight: normal; } .info-box p { margin-bottom: 0; } /* ========================= LINKI ========================= */ .content a { color: #292724; text-decoration: none; border-bottom: 1px solid #b49b68; } .content a:hover { color: #8e784e; } /* ========================= RSVP ========================= */ .rsvp-form { max-width: 600px; margin: 0 auto; text-align: left; } .rsvp-form label { display: block; margin-top: 20px; margin-bottom: 7px; font-size: 16px; } .rsvp-form input, .rsvp-form textarea, .rsvp-form select { width: 100%; padding: 12px; border: 1px solid #d5cdbf; border-radius: 0; background: #fffdf9; color: #292724; font-family: Georgia, serif; font-size: 16px; } .rsvp-form textarea { min-height: 120px; resize: vertical; } .rsvp-form button { display: block; margin: 30px auto 0; padding: 12px 30px; border: 1px solid #b49b68; background: transparent; color: #292724; font-family: Georgia, serif; font-size: 16px; cursor: pointer; transition: 0.2s ease; } .rsvp-form button:hover { background: #b49b68; color: #fff; } /* ========================= ZDJĘCIA ========================= */ .photo { display: block; width: 100%; max-width: 700px; height: auto; margin: 30px auto; } /* ========================= TEKSTY PIOSENEK ========================= */ .song-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 50px; padding: 0; list-style: none; } .song-nav li a { display: inline-block; padding: 8px 16px; background: #fff; color: #292724; text-decoration: none; border: 1px solid #e3dec9; border-radius: 4px; font-size: 14px; transition: all 0.2s ease; } .song-nav li a:hover { background: #b49b68; color: #fff; border-color: #b49b68; } .song-item { margin-bottom: 60px; text-align: center; } .song-item h2 { display: inline-block; margin-bottom: 20px; padding-bottom: 10px; font-size: 24px; font-weight: normal; letter-spacing: 1px; color: #b49b68; border-bottom: 1px dashed #e3dec9; } .song-lyrics { font-size: 15px; line-height: 1.8; } /* ========================= TELEFONY ========================= */ @media (max-width: 768px) { .menu { top: 20px; gap: 12px; padding: 0 10px; font-size: 13px; } .home-page { background-attachment: scroll; } .welcome { padding: 120px 20px 50px; } .names { font-size: 42px; letter-spacing: 2px; } .subtitle { font-size: 20px; } .date { font-size: 21px; letter-spacing: 3px; } .message { font-size: 18px; } .page { padding: 120px 20px 50px; } .page-title { font-size: 34px; } .page-subtitle { font-size: 17px; } .section h2 { font-size: 24px; } .section p { font-size: 17px; } .song-nav { gap: 8px; } .song-nav li a { padding: 7px 12px; font-size: 13px; } .song-lyrics { font-size: 15px; } } /* ========================= BARDZO MAŁE TELEFONY ========================= */ @media (max-width: 480px) { .menu { top: 15px; gap: 8px; font-size: 12px; } .names { font-size: 34px; } .subtitle { font-size: 18px; } .date { font-size: 19px; } .message { font-size: 17px; } .page-title { font-size: 30px; } }
+```css
+/* =========================================================
+   USTAWIENIA GŁÓWNE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #f8f5ef;
+
+    color: #292724;
+
+    font-family: Georgia, serif;
+}
+
+
+/* =========================================================
+   TŁA
+   ========================================================= */
+
+/*
+   TŁO 1
+   Użycie:
+   <body class="bg-one">
+*/
+
+body.bg-one {
+    background-image:
+        linear-gradient(
+            rgba(248, 245, 239, 0.85),
+            rgba(248, 245, 239, 0.85)
+        ),
+        url("./tlo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*
+   TŁO 2
+   Użycie:
+   <body class="bg-two">
+*/
+
+body.bg-two {
+    background-image:
+        linear-gradient(
+            rgba(248, 245, 239, 0.85),
+            rgba(248, 245, 239, 0.85)
+        ),
+        url("./tlo2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*
+   TŁO 3
+   Użycie:
+   <body class="bg-three">
+*/
+
+body.bg-three {
+    background-image:
+        linear-gradient(
+            rgba(248, 245, 239, 0.85),
+            rgba(248, 245, 239, 0.85)
+        ),
+        url("./tlo3.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*
+   ADRIA — SALA
+   Użycie:
+   <body class="bg-adria-sala">
+
+   Zdjęcie jest półprzezroczyste,
+   ale tekst pozostaje w pełni czytelny.
+*/
+
+body.bg-adria-sala {
+    position: relative;
+
+    min-height: 100vh;
+
+    background: #f8f5ef;
+}
+
+body.bg-adria-sala::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("./adriasala.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.18;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/*
+   ADRIA — HOTEL
+   Użycie:
+   <body class="bg-adria-hotel">
+
+   Zdjęcie jest półprzezroczyste,
+   ale tekst pozostaje w pełni czytelny.
+*/
+
+body.bg-adria-hotel {
+    position: relative;
+
+    min-height: 100vh;
+
+    background: #f8f5ef;
+}
+
+body.bg-adria-hotel::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("./adriahotel.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.18;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/*
+   Elementy strony muszą znajdować się
+   nad zdjęciem tła Adrii.
+*/
+
+body.bg-adria-sala > *,
+body.bg-adria-hotel > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu {
+    position: fixed;
+
+    top: 25px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    padding: 0 15px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    background: #f8f5ef;
+
+    z-index: 100;
+}
+
+.menu a {
+    color: #292724;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid transparent;
+
+    padding-bottom: 4px;
+
+    transition: border-color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+    border-bottom-color: #b49b68;
+}
+
+
+/*
+   Stary przycisk hamburgera.
+   Na ten moment menu pozostaje klasyczne.
+*/
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================================
+   STRONA GŁÓWNA
+   ========================================================= */
+
+.home-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(248, 245, 239, 0.82),
+            rgba(248, 245, 239, 0.82)
+        ),
+        url("./tlo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.welcome {
+    width: 100%;
+
+    max-width: 800px;
+
+    padding: 120px 20px 60px;
+
+    margin: 0 auto;
+}
+
+.names {
+    margin: 0;
+
+    font-size: 64px;
+
+    font-weight: normal;
+
+    letter-spacing: 4px;
+}
+
+.subtitle {
+    margin-top: 20px;
+
+    font-size: 22px;
+
+    font-style: italic;
+}
+
+.date {
+    margin-top: 30px;
+
+    font-size: 26px;
+
+    letter-spacing: 5px;
+}
+
+.message {
+    max-width: 500px;
+
+    margin: 20px auto 0;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+.line {
+    width: 60px;
+
+    height: 1px;
+
+    margin: 30px auto;
+
+    background: #b49b68;
+}
+
+
+/* =========================================================
+   WSPÓLNY UKŁAD PODSTRON
+   ========================================================= */
+
+.page {
+    min-height: 100vh;
+
+    padding: 120px 25px 70px;
+
+    text-align: center;
+}
+
+.content {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.page-title {
+    margin: 0;
+
+    font-size: 44px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    margin-top: 15px;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+.gold-line {
+    width: 60px;
+
+    height: 1px;
+
+    margin: 30px auto 40px;
+
+    background: #b49b68;
+}
+
+
+/* =========================================================
+   SEKCJE
+   ========================================================= */
+
+.section {
+    margin: 45px auto;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+.section p {
+    max-width: 650px;
+
+    margin: 10px auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   KARTY INFORMACYJNE
+   ========================================================= */
+
+.info-box {
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    border: 1px solid #ded7c9;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.info-box h3 {
+    margin-top: 0;
+
+    font-size: 21px;
+
+    font-weight: normal;
+}
+
+.info-box p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LINKI
+   ========================================================= */
+
+.content a {
+    color: #292724;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #b49b68;
+}
+
+.content a:hover {
+    color: #8e784e;
+}
+
+
+/* =========================================================
+   RSVP
+   ========================================================= */
+
+.rsvp-form {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.rsvp-form label {
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 7px;
+
+    font-size: 16px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-form select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5cdbf;
+
+    border-radius: 0;
+
+    background: #fffdf9;
+
+    color: #292724;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+}
+
+.rsvp-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.rsvp-form button {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 12px 30px;
+
+    border: 1px solid #b49b68;
+
+    background: transparent;
+
+    color: #292724;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.rsvp-form button:hover {
+    background: #b49b68;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   ZDJĘCIA
+   ========================================================= */
+
+.photo {
+    display: block;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    margin: 30px auto;
+}
+
+
+/* =========================================================
+   TEKSTY PIOSENEK
+   ========================================================= */
+
+.song-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 50px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.song-nav li a {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background: #fff;
+
+    color: #292724;
+
+    text-decoration: none;
+
+    border: 1px solid #e3dec9;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.song-nav li a:hover {
+    background: #b49b68;
+
+    color: #fff;
+
+    border-color: #b49b68;
+}
+
+.song-item {
+    margin-bottom: 60px;
+
+    text-align: center;
+}
+
+.song-item h2 {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: #b49b68;
+
+    border-bottom: 1px dashed #e3dec9;
+}
+
+.song-lyrics {
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TELEFONY
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        top: 20px;
+
+        gap: 12px;
+
+        padding: 0 10px;
+
+        font-size: 13px;
+    }
+
+    .home-page {
+        background-attachment: scroll;
+    }
+
+    /*
+       Na telefonach zdjęcia Adrii również
+       przewijają się razem ze stroną.
+    */
+
+    body.bg-adria-sala::before,
+    body.bg-adria-hotel::before {
+        position: absolute;
+    }
+
+    .welcome {
+        padding: 120px 20px 50px;
+    }
+
+    .names {
+        font-size: 42px;
+
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .date {
+        font-size: 21px;
+
+        letter-spacing: 3px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .page {
+        padding: 120px 20px 50px;
+    }
+
+    .page-title {
+        font-size: 34px;
+    }
+
+    .page-subtitle {
+        font-size: 17px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 17px;
+    }
+
+    .song-nav {
+        gap: 8px;
+    }
+
+    .song-nav li a {
+        padding: 7px 12px;
+
+        font-size: 13px;
+    }
+
+    .song-lyrics {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   BARDZO MAŁE TELEFONY
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .menu {
+        top: 15px;
+
+        gap: 8px;
+
+        font-size: 12px;
+    }
+
+    .names {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 19px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+}
+```
