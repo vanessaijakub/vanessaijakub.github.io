@@ -1,3 +1,8 @@
+Oto poprawiony i w pełni zintegrowany kod pliku ceremonia-wesele.html.
+
+Dodałem w nim przycisk hamburgera (☰) oraz sekcję .menu-links w nawigacji, odpowiednie style responsywne w sekcji <style> (które na komputerze pokazują menu klasycznie, a na telefonie rozwijają je po kliknięciu), a na samym dole skrypt obsługujący to rozwijanie.
+
+HTML
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -20,23 +25,35 @@
             background-repeat: no-repeat;
         }
 
-        /* Styl menu (ujednolicony, żeby nie łamał się do nowej linii) */
+        /* Styl menu głównego */
         .menu {
             position: fixed;
-            top: 25px;
+            top: 0;
             left: 0;
-            right: 0;
+            width: 100vw;
+            box-sizing: border-box;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: nowrap;
-            gap: 20px;
             font-size: 14px;
             letter-spacing: 1px;
-            padding: 10px 20px;
-            background: rgba(248, 245, 239, 0.95);
+            padding: 12px 20px;
+            background: rgba(248, 245, 239, 0.98);
             z-index: 100;
         }
+
+        /* Imię w menu widoczne na telefonie / komputerze */
+        .menu-brand {
+            font-weight: normal;
+        }
+
+        /* Kontener na linki */
+        .menu-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
         .menu a {
             color: #292724;
             text-decoration: none;
@@ -45,9 +62,21 @@
             padding-bottom: 4px;
             transition: border-bottom-color 0.3s;
         }
+
         .menu a:hover,
         .menu a.active {
             border-bottom-color: #b49b68;
+        }
+
+        /* Przycisk hamburgera (domyślnie ukryty na komputerze) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #292724;
+            cursor: pointer;
+            padding: 0;
         }
 
         /* Układ treści */
@@ -92,18 +121,70 @@
             color: #b49b68;
             margin-bottom: 15px;
         }
+
+        /* Styl dla urządzeń mobilnych (RWD) */
+        @media (max-width: 768px) {
+            .menu {
+                padding: 12px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            /* Ukrywamy linki domyślnie na telefonie i stylizujemy je jako rozwijane menu */
+            .menu-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(248, 245, 239, 0.98);
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                border-top: 1px solid #e3dec9;
+            }
+
+            /* Klasa aktywowana przez JavaScript po kliknięciu przycisku */
+            .menu-links.active {
+                display: flex;
+            }
+
+            .page {
+                padding: 100px 20px 50px;
+            }
+
+            .page-title {
+                font-size: 34px;
+            }
+
+            .page-subtitle {
+                font-size: 15px;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <nav class="menu">
-        <a href="index.html">Strona główna</a>
-        <a href="ceremonia-wesele.html" class="active">Ceremonia i wesele</a>
-        <a href="transport-i-noclegi.html">Transport i noclegi</a>
-        <a href="plan-stolow.html">Plan stołów</a>
-        <a href="teksty-piosenek.html">Teksty piosenek</a>
-        <a href="rsvp.html">RSVP</a>
+        <span class="menu-brand">Vanessa &amp; Jakub</span>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+        <div class="menu-links">
+            <a href="index.html">Strona główna</a>
+            <a href="ceremonia-wesele.html" class="active">Ceremonia i wesele</a>
+            <a href="transport-i-noclegi.html">Transport i noclegi</a>
+            <a href="plan-stolow.html">Plan stołów</a>
+            <a href="teksty-piosenek.html">Teksty piosenek</a>
+            <a href="rsvp.html">RSVP</a>
+        </div>
     </nav>
 
     <main class="page">
@@ -140,6 +221,13 @@
 
         </div>
     </main>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.menu-links');
+            links.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
