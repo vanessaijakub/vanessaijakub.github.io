@@ -4,29 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Vanessa & Jakub | Biorą ślub!</title>
+    <style>
+        /* Styl dla tła ze zdjęciem tlo.jpg */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Georgia, serif;
+            color: #292724;
+            background: linear-gradient(rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85)), url('tlo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        /* Styl menu głównego */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 12px 20px;
+            background: rgba(248, 245, 239, 0.98);
+            z-index: 100;
+        }
+
+        .menu-brand {
+            font-weight: normal;
+        }
+
+        .menu-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .menu a {
+            color: #292724;
+            text-decoration: none;
+            white-space: nowrap;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 4px;
+            transition: border-bottom-color 0.3s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            border-bottom-color: #b49b68;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #292724;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        /* Układ strony głównej */
+        .home-page {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .welcome {
+            padding: 40px;
+        }
+
+        .names {
+            margin: 0;
+            font-size: 64px;
+            font-weight: normal;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            font-size: 22px;
+            font-style: italic;
+        }
+
+        .date {
+            margin-top: 30px;
+            font-size: 26px;
+            letter-spacing: 5px;
+        }
+
+        .message {
+            margin: 20px auto 0;
+            max-width: 500px;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .line {
+            width: 60px;
+            height: 1px;
+            margin: 30px auto;
+            background: #b49b68;
+        }
+
+        /* Styl dla urządzeń mobilnych (RWD) */
+        @media (max-width: 768px) {
+            .menu {
+                padding: 12px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(248, 245, 239, 0.98);
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                border-top: 1px solid #e3dec9;
+            }
+
+            .menu-links.active {
+                display: flex;
+            }
+
+            .names {
+                font-size: 42px;
+                letter-spacing: 2px;
+            }
+
+            .date {
+                font-size: 21px;
+                letter-spacing: 3px;
+            }
+
+            .subtitle,
+            .message {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
-<body class="home-page bg-one">
+<body class="home-page">
 
-   <nav class="menu">
-    <span style="font-size: 14px; letter-spacing: 1px;">Vanessa &amp; Jakub</span>
-    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-    <div class="menu-links">
-        <a href="index.html" class="active">Strona główna</a>
-        <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
-        <a href="transport-i-noclegi.html">Transport i noclegi</a>
-        <a href="plan-stolow.html">Plan stołów</a>
-        <a href="teksty-piosenek.html">Teksty piosenek</a>
-        <a href="rsvp.html">RSVP</a>
-    </div>
-</nav>
+    <nav class="menu">
+        <span class="menu-brand">Vanessa &amp; Jakub</span>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+        <div class="menu-links">
+            <a href="index.html" class="active">Strona główna</a>
+            <a href="ceremonia-wesele.html">Ceremonia i wesele</a>
+            <a href="transport-i-noclegi.html">Transport i noclegi</a>
+            <a href="plan-stolow.html">Plan stołów</a>
+            <a href="teksty-piosenek.html">Teksty piosenek</a>
+            <a href="rsvp.html">RSVP</a>
+        </div>
+    </nav>
 
     <main class="welcome">
-
         <h1 class="names">
             Vanessa & Jakub
         </h1>
@@ -45,8 +198,14 @@
             Z ogromną radością zapraszamy Was<br>
             do wspólnego świętowania.
         </p>
-
     </main>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.menu-links');
+            links.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
