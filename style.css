@@ -1,3 +1,7 @@
+/* =========================================================
+   USTAWIENIA PODSTAWOWE
+   ========================================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -9,8 +13,10 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+
     background: #f8f5ef;
     color: #292724;
+
     font-family: Georgia, serif;
 }
 
@@ -33,6 +39,7 @@ body.bg-one {
     background-attachment: fixed;
 }
 
+
 body.bg-two {
     background-image:
         linear-gradient(
@@ -46,6 +53,7 @@ body.bg-two {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 
 body.bg-three {
     background-image:
@@ -69,11 +77,13 @@ body.bg-three {
 body.bg-adria-sala {
     position: relative;
     min-height: 100vh;
+
     background: #f8f5ef;
 }
 
 body.bg-adria-sala::before {
     content: "";
+
     position: fixed;
     inset: 0;
 
@@ -84,10 +94,7 @@ body.bg-adria-sala::before {
 
     opacity: 0.18;
 
-    /* Tło znajduje się pod całą zawartością */
     z-index: -1;
-
-    /* Zdjęcie nigdy nie przechwytuje kliknięć */
     pointer-events: none;
 }
 
@@ -99,11 +106,13 @@ body.bg-adria-sala::before {
 body.bg-adria-hotel {
     position: relative;
     min-height: 100vh;
+
     background: #f8f5ef;
 }
 
 body.bg-adria-hotel::before {
     content: "";
+
     position: fixed;
     inset: 0;
 
@@ -114,10 +123,7 @@ body.bg-adria-hotel::before {
 
     opacity: 0.18;
 
-    /* Tło znajduje się pod całą zawartością */
     z-index: -1;
-
-    /* Zdjęcie nigdy nie przechwytuje kliknięć */
     pointer-events: none;
 }
 
@@ -128,6 +134,7 @@ body.bg-adria-hotel::before {
 
 .menu {
     position: fixed;
+
     top: 25px;
     left: 0;
     right: 0;
@@ -146,15 +153,15 @@ body.bg-adria-hotel::before {
 
     background: #f8f5ef;
 
-    /* Menu zawsze znajduje się nad stroną */
     z-index: 9999;
 
-    /* Menu może być normalnie klikane */
     pointer-events: auto;
 }
 
+
 .menu a {
     color: #292724;
+
     text-decoration: none;
     white-space: nowrap;
 
@@ -165,10 +172,14 @@ body.bg-adria-hotel::before {
     transition: border-color 0.3s ease;
 }
 
+
 .menu a:hover,
 .menu a.active {
     border-bottom-color: #b49b68;
 }
+
+
+/* Jeżeli kiedyś będzie używany przycisk menu mobilnego */
 
 .menu-toggle {
     display: none;
@@ -201,6 +212,7 @@ body.bg-adria-hotel::before {
     background-attachment: fixed;
 }
 
+
 .welcome {
     width: 100%;
     max-width: 800px;
@@ -210,6 +222,7 @@ body.bg-adria-hotel::before {
     margin: 0 auto;
 }
 
+
 .names {
     margin: 0;
 
@@ -218,6 +231,7 @@ body.bg-adria-hotel::before {
     letter-spacing: 4px;
 }
 
+
 .subtitle {
     margin-top: 20px;
 
@@ -225,12 +239,14 @@ body.bg-adria-hotel::before {
     font-style: italic;
 }
 
+
 .date {
     margin-top: 30px;
 
     font-size: 26px;
     letter-spacing: 5px;
 }
+
 
 .message {
     max-width: 500px;
@@ -241,6 +257,7 @@ body.bg-adria-hotel::before {
     font-style: italic;
     line-height: 1.7;
 }
+
 
 .line {
     width: 60px;
@@ -268,11 +285,13 @@ body.bg-adria-hotel::before {
     z-index: 1;
 }
 
+
 .content {
     max-width: 850px;
 
     margin: 0 auto;
 }
+
 
 .page-title {
     margin: 0;
@@ -282,6 +301,7 @@ body.bg-adria-hotel::before {
     letter-spacing: 2px;
 }
 
+
 .page-subtitle {
     margin-top: 15px;
 
@@ -289,6 +309,7 @@ body.bg-adria-hotel::before {
     font-style: italic;
     line-height: 1.7;
 }
+
 
 .gold-line {
     width: 60px;
@@ -308,6 +329,7 @@ body.bg-adria-hotel::before {
     margin: 45px auto;
 }
 
+
 .section h2 {
     margin-bottom: 15px;
 
@@ -315,6 +337,7 @@ body.bg-adria-hotel::before {
     font-weight: normal;
     letter-spacing: 1px;
 }
+
 
 .section p {
     max-width: 650px;
@@ -341,12 +364,14 @@ body.bg-adria-hotel::before {
     background: rgba(255, 255, 255, 0.25);
 }
 
+
 .info-box h3 {
     margin-top: 0;
 
     font-size: 21px;
     font-weight: normal;
 }
+
 
 .info-box p {
     margin-bottom: 0;
@@ -365,13 +390,14 @@ body.bg-adria-hotel::before {
     border-bottom: 1px solid #b49b68;
 }
 
+
 .content a:hover {
     color: #8e784e;
 }
 
 
 /* =========================================================
-   RSVP
+   RSVP — FORMULARZ
    ========================================================= */
 
 .rsvp-form {
@@ -382,6 +408,7 @@ body.bg-adria-hotel::before {
     text-align: left;
 }
 
+
 .rsvp-form label {
     display: block;
 
@@ -390,6 +417,7 @@ body.bg-adria-hotel::before {
 
     font-size: 16px;
 }
+
 
 .rsvp-form input,
 .rsvp-form textarea,
@@ -408,11 +436,13 @@ body.bg-adria-hotel::before {
     font-size: 16px;
 }
 
+
 .rsvp-form textarea {
     min-height: 120px;
 
     resize: vertical;
 }
+
 
 .rsvp-form button {
     display: block;
@@ -433,9 +463,136 @@ body.bg-adria-hotel::before {
     transition: 0.2s ease;
 }
 
+
 .rsvp-form button:hover {
     background: #b49b68;
     color: #fff;
+}
+
+
+/* =========================================================
+   RSVP — STRONA Z LOGIEM
+   ========================================================= */
+
+/*
+   RSVP korzysta z tej samej klasy .home-page co strona główna,
+   dlatego ma dokładnie to samo tło tlo.jpg.
+
+   .rsvp-page dodatkowo ustawia odpowiedni układ zawartości.
+*/
+
+.rsvp-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(248, 245, 239, 0.82),
+            rgba(248, 245, 239, 0.82)
+        ),
+        url("./tlo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/*
+   Główna zawartość RSVP.
+   Jest odsunięta od góry, żeby nie wchodziła pod menu.
+*/
+
+.rsvp-content {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 150px 20px 70px;
+}
+
+
+/*
+   LOGO
+
+   Białe tło jest już usunięte z pliku
+   logo-transparent.png, więc przez logo będzie
+   widoczne tło strony.
+*/
+
+.wedding-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 520px;
+
+    height: auto;
+
+    margin: 0 auto 35px;
+}
+
+
+/*
+   Napis RSVP
+*/
+
+.rsvp-content h1 {
+    margin: 0;
+
+    font-size: 44px;
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+
+/*
+   Kreska pod RSVP
+*/
+
+.rsvp-content .line {
+    width: 60px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #b49b68;
+}
+
+
+/*
+   Tekst pod RSVP
+*/
+
+.rsvp-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 19px;
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+
+/*
+   Numery telefonu
+*/
+
+.rsvp-contact {
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
 }
 
 
@@ -448,6 +605,7 @@ body.bg-adria-hotel::before {
 
     width: 100%;
     max-width: 700px;
+
     height: auto;
 
     margin: 30px auto;
@@ -473,6 +631,7 @@ body.bg-adria-hotel::before {
     list-style: none;
 }
 
+
 .song-nav li a {
     display: inline-block;
 
@@ -491,6 +650,7 @@ body.bg-adria-hotel::before {
     transition: all 0.2s ease;
 }
 
+
 .song-nav li a:hover {
     background: #b49b68;
     color: #fff;
@@ -498,11 +658,13 @@ body.bg-adria-hotel::before {
     border-color: #b49b68;
 }
 
+
 .song-item {
     margin-bottom: 60px;
 
     text-align: center;
 }
+
 
 .song-item h2 {
     display: inline-block;
@@ -519,6 +681,7 @@ body.bg-adria-hotel::before {
     border-bottom: 1px dashed #e3dec9;
 }
 
+
 .song-lyrics {
     font-size: 15px;
     line-height: 1.8;
@@ -526,10 +689,12 @@ body.bg-adria-hotel::before {
 
 
 /* =========================================================
-   TELEFONY
+   TELEFONY — DO 768 PX
    ========================================================= */
 
 @media (max-width: 768px) {
+
+    /* MENU */
 
     .menu {
         top: 20px;
@@ -540,71 +705,88 @@ body.bg-adria-hotel::before {
 
         font-size: 13px;
 
-        /*
-         * Pozwala menu przechodzić do kolejnych wierszy
-         * bez blokowania kliknięć.
-         */
         line-height: 1.4;
     }
 
-    .home-page {
+
+    /* TŁO STRONY GŁÓWNEJ */
+
+    .home-page,
+    .rsvp-page {
         background-attachment: scroll;
     }
 
-    /*
-     * Na telefonach zdjęcie Adrii jest ustawione jako
-     * absolutne, żeby zachować prawidłowe warstwy.
-     */
+
+    /* ADRIA */
+
     body.bg-adria-sala::before,
     body.bg-adria-hotel::before {
         position: absolute;
     }
 
+
+    /* STRONA GŁÓWNA */
+
     .welcome {
         padding: 120px 20px 50px;
     }
+
 
     .names {
         font-size: 42px;
         letter-spacing: 2px;
     }
 
+
     .subtitle {
         font-size: 20px;
     }
+
 
     .date {
         font-size: 21px;
         letter-spacing: 3px;
     }
 
+
     .message {
         font-size: 18px;
     }
+
+
+    /* PODSTRONY */
 
     .page {
         padding: 120px 20px 50px;
     }
 
+
     .page-title {
         font-size: 34px;
     }
+
 
     .page-subtitle {
         font-size: 17px;
     }
 
+
     .section h2 {
         font-size: 24px;
     }
+
 
     .section p {
         font-size: 17px;
     }
 
+
+    /* PIOSENKI */
+
     .song-nav {
         gap: 8px;
     }
+
 
     .song-nav li a {
         padding: 7px 12px;
@@ -612,17 +794,51 @@ body.bg-adria-hotel::before {
         font-size: 13px;
     }
 
+
     .song-lyrics {
         font-size: 15px;
+    }
+
+
+    /* =====================================================
+       RSVP — TELEFON
+       ===================================================== */
+
+    .rsvp-content {
+        padding: 145px 20px 50px;
+    }
+
+
+    .wedding-logo {
+        max-width: 430px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .rsvp-content h1 {
+        font-size: 36px;
+    }
+
+
+    .rsvp-text {
+        font-size: 17px;
+    }
+
+
+    .rsvp-contact {
+        font-size: 17px;
     }
 }
 
 
 /* =========================================================
-   BARDZO MAŁE TELEFONY
+   BARDZO MAŁE TELEFONY — DO 480 PX
    ========================================================= */
 
 @media (max-width: 480px) {
+
+    /* MENU */
 
     .menu {
         top: 15px;
@@ -636,23 +852,63 @@ body.bg-adria-hotel::before {
         line-height: 1.4;
     }
 
+
+    /* STRONA GŁÓWNA */
+
     .names {
         font-size: 34px;
     }
+
 
     .subtitle {
         font-size: 18px;
     }
 
+
     .date {
         font-size: 19px;
     }
+
 
     .message {
         font-size: 17px;
     }
 
+
     .page-title {
         font-size: 30px;
+    }
+
+
+    /* =====================================================
+       RSVP — MAŁY TELEFON
+       ===================================================== */
+
+    .rsvp-content {
+        padding: 140px 15px 40px;
+    }
+
+
+    .wedding-logo {
+        max-width: 340px;
+
+        margin-bottom: 24px;
+    }
+
+
+    .rsvp-content h1 {
+        font-size: 32px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .rsvp-text {
+        font-size: 16px;
+    }
+
+
+    .rsvp-contact {
+        font-size: 16px;
     }
 }
